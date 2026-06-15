@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { usePokemonDetail } from '../hooks/usePokemonDetail'
 import { TYPE_COLORS } from '../utils/typeColors'
+import { ReviewSection } from './ReviewSection'
 
 interface Props {
   nameOrId: string
@@ -100,6 +101,9 @@ export function PokemonModal({ nameOrId, onClose }: Props) {
                 </span>
               ))}
             </div>
+
+            {/* Reseñas */}
+            <ReviewSection pokemonId={data.id} />
           </>
         )}
       </div>
